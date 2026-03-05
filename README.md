@@ -1,6 +1,7 @@
 # SPIDER
 
-Firmware workspace for a 12-servo hexapod driven by a PCA9685 board.
+Firmware workspace for a 12-servo hexapod driven by a PCA9685 board, targeting
+Teensy 4.1.
 
 ## Highlights
 
@@ -19,10 +20,12 @@ Firmware workspace for a 12-servo hexapod driven by a PCA9685 board.
 - `docs/calibration.md`: safe calibration procedure.
 - `docs/development.md`: local workflow and coding conventions.
 
-## Quick Start (Arduino IDE)
+## Quick Start (Teensy 4.1 + Arduino IDE)
 
 1. Install libraries:
    - `Adafruit PWM Servo Driver Library`
+2. In Arduino IDE, install Teensy support and select:
+   - Board: `Teensy 4.1`
 2. Open `hexapod-firmware.ino`.
 3. Verify servo power is external and grounds are shared.
 4. Upload and open Serial Monitor at `115200`.
@@ -37,7 +40,7 @@ make monitor PORT=/dev/tty.usbmodemXXXX
 
 Defaults:
 
-- `FQBN=arduino:avr:uno`
+- `FQBN=teensy:avr:teensy41`
 - `BAUD=115200`
 
 ## Serial Commands
@@ -62,4 +65,4 @@ Defaults:
 
 ## License
 
-MIT, see [LICENSE](LICENSE).
+Private proprietary code, see [LICENSE](LICENSE).

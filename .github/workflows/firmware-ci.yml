@@ -18,10 +18,12 @@ jobs:
 
       - name: Install core and libraries
         run: |
+          arduino-cli config init --overwrite
+          arduino-cli config add board_manager.additional_urls https://www.pjrc.com/teensy/package_teensy_index.json
           arduino-cli core update-index
-          arduino-cli core install arduino:avr
+          arduino-cli core install teensy:avr
           arduino-cli lib install "Adafruit PWM Servo Driver Library"
 
       - name: Compile firmware
         run: |
-          arduino-cli compile --fqbn arduino:avr:uno .
+          arduino-cli compile --fqbn teensy:avr:teensy41 .

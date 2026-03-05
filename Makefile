@@ -1,5 +1,5 @@
 ARDUINO_CLI ?= arduino-cli
-FQBN ?= arduino:avr:uno
+FQBN ?= teensy:avr:teensy41
 SKETCH_DIR ?= .
 PORT ?= /dev/ttyACM0
 BAUD ?= 115200

@@ -19,6 +19,12 @@
 3. Validate runtime tuning commands.
 4. Move to short floor tests.
 
+## CLI Build Target
+
+Default compile target is Teensy 4.1:
+
+- `FQBN=teensy:avr:teensy41`
+
 ## Near-Term Backlog
 
 - Add additional gaits (ripple, wave).

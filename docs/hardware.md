@@ -2,7 +2,7 @@
 
 ## Core Components
 
-- Microcontroller board compatible with Arduino `Wire`.
+- Teensy 4.1 microcontroller board.
 - PCA9685 servo driver board (I2C).
 - 12 servos (6 base joints, 6 knee joints).
 - External 5V-6V servo power supply sized for stall current.
@@ -12,10 +12,16 @@
 - MCU `SDA` -> PCA9685 `SDA`
 - MCU `SCL` -> PCA9685 `SCL`
 - MCU `GND` -> PCA9685 `GND`
+- MCU `3.3V` -> PCA9685 `VCC` (logic rail)
 - Servo PSU `+` -> PCA9685 `V+` rail
 - Servo PSU `-` -> PCA9685 `GND`
 
 Always share ground between MCU and servo PSU.
+
+Teensy 4.1 default I2C pins:
+
+- `SDA`: pin 18
+- `SCL`: pin 19
 
 ## Servo Channel Map
 
