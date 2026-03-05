@@ -1,0 +1,27 @@
+name: firmware-ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Arduino CLI
+        uses: arduino/setup-arduino-cli@v2
+
+      - name: Install core and libraries
+        run: |
+          arduino-cli core update-index
+          arduino-cli core install arduino:avr
+          arduino-cli lib install "Adafruit PWM Servo Driver Library"
+
+      - name: Compile firmware
+        run: |
+          arduino-cli compile --fqbn arduino:avr:uno .
