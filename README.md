@@ -1,4 +1,4 @@
-# Hexapod Firmware
+# SPIDER
 
 Arduino sketch for a 12-servo hexapod using PCA9685 (`Adafruit_PWMServoDriver`) and a generated tripod gait.
 
